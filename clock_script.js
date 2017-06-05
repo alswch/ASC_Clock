@@ -28,7 +28,6 @@ function digitalclock () {
 
   // var color = "#" + hex_h + hex_m + hex_s;
   // console.log(color);
-  // document.body.style.background = color;
 
   document.getElementById('hex-hour').innerHTML = hH;
   document.getElementById('hex-minute').innerHTML = mH;
@@ -39,6 +38,10 @@ function digitalclock () {
       console.log(hexString);
       return hexString;
     }
+    var r = parseInt(sH) *1;
+    var g = parseInt(sH) *3;
+    var b = parseInt(sH) *5;
+    document.body.style.background = "rgb(" + r + "," + g + "," + b +")";
 
   function checkTime(i) {
     // console.log("checkTime");
