@@ -17,3 +17,16 @@
   left: 170px;
   line-height: 50px;
 }
+
+.hex-time {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  float: left;
+  font-size: 40px;
+  text-align: center;
+  top: 75px;
+  left: 170px;
+  line-height: 50px;
+}
