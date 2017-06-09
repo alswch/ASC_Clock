@@ -1,6 +1,5 @@
 window.setInterval(digitalclock,1000)
 
-
 function digitalclock () {
   var today = new Date();
   // console.log(today);
@@ -25,6 +24,8 @@ function digitalclock () {
   hH = checkTime(hH);
   mH = checkTime(mH);
   sH = checkTime(sH);
+  console.log("hms:", hH, mH, sH);
+
 
   // var color = "#" + hex_h + hex_m + hex_s;
   // console.log(color);
@@ -33,22 +34,22 @@ function digitalclock () {
   document.getElementById('hex-minute').innerHTML = mH;
   document.getElementById('hex-second').innerHTML = sH;
 
-    function hexTime (num) {
-      hexString = num.toString(16);
-      console.log(hexString);
-      return hexString;
-    }
-    var r = parseInt(sH) *1;
-    var g = parseInt(sH) *3;
-    var b = parseInt(sH) *5;
-    document.body.style.background = "rgb(" + r + "," + g + "," + b +")";
+    // var r = parseInt(sH) *1;
+    // var g = parseInt(sH) *3;
+    // var b = parseInt(sH) *5;
+    document.body.style.background = "#" + hH + mH + sH;
+};
+function hexTime (num) {
+  // console.log("==hexTime==");
+  hexString = num.toString(16);
+  console.log(hexString);
+  return hexString;
+};
 
-  function checkTime(i) {
-    // console.log("checkTime");
-    if (i.length < "2") {
-      i = "0" + i;
-    }
-    return i;
+function checkTime(i) {
+  // console.log("checkTime");
+  if (i.length < 2) {
+    i = "0" + i;
   }
-
-}
+  return i;
+};
